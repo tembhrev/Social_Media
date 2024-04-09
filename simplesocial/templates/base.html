@@ -28,12 +28,18 @@
                 {% if user.is_authenticated %}
                     <li><a href="#">Post</a></li>
                     <li><a href="#">Groups</a></li>
-                    <li><a href="#">Create Group</a></li>
-                    <li><a href="{% url 'accounts:logout' %}">Log Out</a></li>
+                    <li><a href="#">Create Group</a></li>                   
+                    <li>
+                        <form action="{% url 'accounts:logout' %}" method="POST">
+                            {% csrf_token %}
+                            <button type="submit">Logout</button>
+                        </form>
+                    </li>
+
                     
                 {% else %}
                     <li><a href="#">Groups</a></li>
-                    <li><a href="{% url 'acconts:login' %}">Log In</a></li>
+                    <li><a href="{% url 'accounts:login' %}">Log In</a></li>
                     <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
                 {% endif %}
             </ul>
@@ -46,8 +52,5 @@
         {% endblock %}
     </div>
 
-    {% block content %}
-
-    {% endblock %}
 </body>
 </html>
