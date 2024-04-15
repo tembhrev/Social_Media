@@ -1,3 +1,4 @@
-__pychache__
-test.__pychache__
-tempCodeRunnerFile.py
+__pychache__/
+accounts/__pycache__/
+groups/__pycache__/
+posts/__pycache__/
