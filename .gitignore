@@ -1,4 +1,5 @@
 __pychache__/
-accounts/__pycache__/
-groups/__pycache__/
-posts/__pycache__/
+simplesocial/accounts/__pycache__/
+simplesocial/groups/__pycache__/
+simplesocial/posts/__pycache__/
+
